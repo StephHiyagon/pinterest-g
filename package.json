@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,9 @@
   },
   "homepage": "https://github.com/StephHiyagon/pinterest-g#readme",
   "devDependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
   }
 }
