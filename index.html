@@ -13,8 +13,29 @@
 
     <!-- Bloque header -->
     <header class="header">
-      <h1 class="element-stack">Pinterest Flow</h1>
-      <p class="element-stack">Refresh to load a new set of data.</p>
+      <!-- Elemento Navegador -->
+      <nav class="header__nav">
+        <img src="assets/img/pinterest-logo.png" class="header__nav--logo" alt="Logo de Pinterest">
+        <div class="header__nav--search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="text" placeholder="Buscar">
+        </div>
+        <img src="assets/img/icon-profile.png" class="header__nav--profile" alt="Icono de persona">
+        <img src="assets/img/menu-hamburguer.png" class="header__nav--menu" alt="Icono de menu">
+        <img src="assets/img/message.png" class="header__nav--message" alt="Icono de mensaje">
+      </nav>
+      <!-- Elemento links scroll -->
+      <div class="header__links">
+        <img src="assets/img/upload-arrow.png" class="header__links--share" alt="">
+        <button type="button" class="header__links--follow" name="button">Seguir tablero</button>
+      </div>
+      <!-- Elemento info -->
+      <div class="header__info">
+        <h1 class="header__info--title">Web UI</h1>
+        <label for=""><span class="header__info--pines"></span>Pines</label>
+        <label for=""><span class="header__info--followers"></span>Seguidores</label>
+        <div class="header__info--photo"></div>
+      </div>
     </header>
 
     <!-- Bloque board -->
