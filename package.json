@@ -1,0 +1,32 @@
+{
+  "name": "pinterest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephHiyagon/pinterest-g.git"
+  },
+  "keywords": [
+    "gulp",
+    "sass",
+    "js",
+    "API",
+    "html5",
+    "css3"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephHiyagon/pinterest-g/issues"
+  },
+  "homepage": "https://github.com/StephHiyagon/pinterest-g#readme",
+  "devDependencies": {
+    "express": "^4.15.3"
+  }
+}
