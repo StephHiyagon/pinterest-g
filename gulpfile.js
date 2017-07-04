@@ -18,7 +18,8 @@ var paths = {
   sass: 'scss/**/*.scss',
   js: 'js/**/*.js',
   mainSass: 'scss/main.scss',
-  mainJS: 'js/app.js'
+  mainJS: 'js/**/*.js'
+
 };
 var sources = {
   assets: config.source + paths.assets,
@@ -27,10 +28,13 @@ var sources = {
   js: config.source + paths.assets + paths.js,
   rootSass: config.source + paths.assets + paths.mainSass,
   rootJS: config.source + paths.assets + paths.mainJS
+
 };
+
 gulp.task('html', ()=> {
   gulp.src(sources.html).pipe(gulp.dest(config.dist));
 });
+
 gulp.task('sass', ()=> {
   gulp.src(sources.rootSass)
     .pipe(sass({
@@ -50,6 +54,10 @@ gulp.task('js', ()=> {
       .pipe(gulp.dest(config.dist + paths.assets + "js"))
       .pipe(browserSync.stream());
 });
+
+
+
+
 // gulp.task('js', ()=> {
 //    gulp.src(sources.rootJS)
 //       .pipe(browserify())
