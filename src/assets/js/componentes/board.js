@@ -1,9 +1,13 @@
 const Board=(update)=>{
-  console.log("portada board123");
+  console.log("portada board");
   console.log(state.pin);
-  // console.log(state.page);
+  console.log(state.pin[2]);
   console.log(state.page.next);
-const div= $('<div class="pin"></div>')
+const div= $('<div class="pin"></div>');
+const image=$('<img src="'+state.pin[2].image.original.url+'"  alt="imagen"/>');
+
+div.append(image);
+
 
 
 $.get(state.page.next, (data2) => {
@@ -15,9 +19,11 @@ $.get(state.page.next, (data2) => {
       console.log("HolaSteph");
 
     });
-}
 
-setTimeout(function(){
-  console.log(state.pin2);
-  console.log(state.page2);
-}, 1000);
+    setTimeout(function(){
+      console.log(state.pin2);
+      console.log(state.page2);
+    }, 1000);
+
+    return div;
+}

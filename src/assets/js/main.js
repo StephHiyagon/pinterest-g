@@ -6,7 +6,7 @@ const render = (root) => {
   }
 
   wrapper.append(Board(update));
-  console.log('Hola Ana!!!')
+
 ;
 
 
@@ -20,8 +20,7 @@ const state = {
   page:null,
   pin2:null,
   page2:null,
-  page3:null,
-  page4:null
+
 }
 
 
@@ -33,7 +32,7 @@ $(_=>{
 
       state.pin = data.data;
       state.page= data.page;
-      console.log(state.pin);
+      
       const root = $('#root');
       render(root);
     });
