@@ -18,7 +18,7 @@ var paths = {
   sass: 'scss/**/*.scss',
   js: 'js/**/*.js',
   mainSass: 'scss/main.scss',
-  mainJS: 'js/app.js'
+  mainJS: 'js/**/*.js'
 };
 var sources = {
   assets: config.source + paths.assets,
@@ -53,7 +53,7 @@ gulp.task('js', ()=> {
 // gulp.task('js', ()=> {
 //    gulp.src(sources.rootJS)
 //       .pipe(browserify())
-//       .pipe(rename("bundle.js"))
+//       .pipe(rename("app.js"))
 //       .pipe(gulp.dest(config.dist + paths.assets + "js"))
 //       .pipe(browserSync.stream());
 // });
