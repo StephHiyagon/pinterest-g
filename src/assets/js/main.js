@@ -4,7 +4,7 @@ const render = (root) => {
   const update = function() {
     render(root);
   }
-  wrapper.append(Board(update));
+  wrapper.append(Header(update));
 
   root.append(wrapper);
 
