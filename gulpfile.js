@@ -18,7 +18,8 @@ var paths = {
   sass: 'scss/**/*.scss',
   js: 'js/**/*.js',
   mainSass: 'scss/main.scss',
-  mainJS: 'js/**/*.js'
+  mainJS: 'js/**/*.js',
+  img: 'img/**'
 };
 var sources = {
   assets: config.source + paths.assets,
@@ -26,10 +27,14 @@ var sources = {
   sass: config.source + paths.assets + paths.sass,
   js: config.source + paths.assets + paths.js,
   rootSass: config.source + paths.assets + paths.mainSass,
-  rootJS: config.source + paths.assets + paths.mainJS
+  rootJS: config.source + paths.assets + paths.mainJS,
+  img: config.source + paths.assets + paths.img
 };
 gulp.task('html', ()=> {
   gulp.src(sources.html).pipe(gulp.dest(config.dist));
+});
+gulp.task('img', ()=> {
+  gulp.src(sources.img).pipe(gulp.dest(config.dist+ paths.assets + "img"));
 });
 gulp.task('sass', ()=> {
   gulp.src(sources.rootSass)
@@ -62,6 +67,10 @@ gulp.task('html-watch', ["html"], function (done) {
   browserSync.reload();
   done();
 });
+gulp.task('img-watch', ["img"], function (done) {
+  browserSync.reload();
+  done();
+});
 
 gulp.task('serve', ()=> {
   browserSync.init({
@@ -71,6 +80,7 @@ gulp.task('serve', ()=> {
   });
   gulp.watch(sources.sass, ['sass']);
   gulp.watch(sources.js, ['js']);
+  gulp.watch(sources.html, ['img-watch']);
   gulp.watch(sources.html, ['html-watch']);
 });
 
