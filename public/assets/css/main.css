@@ -65,3 +65,9 @@ body {
       margin-right: 8px; }
     .item__info--user .item-data__dataname {
       font-weight: bold; }
+
+.none {
+  display: none; }
+
+.block {
+  display: block; }

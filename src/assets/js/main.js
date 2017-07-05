@@ -24,6 +24,7 @@ const state = {
   page:null,
   pin2:null,
   page2:null,
+  pines:null,
   modal:null,
   id:null,
   data:null,
@@ -48,6 +49,10 @@ $(_=>{
 
       const root = $('#root');
       render(root);
+
     });
+
+    
+
 
 });

@@ -40,9 +40,9 @@ const Board = (update)=>{
     state.titulo=state.data.metadata.article;
     state.nota=state.data.note;
     state.site=state.data.metadata.link;
-    // state.favicon=state.data.metadata.link.favicon;
+
     console.log(state.site);
-    // state.publicado=state.data.metadata.article.published_at;
+    
 
     update();
     });
@@ -50,6 +50,21 @@ const Board = (update)=>{
 
   })
 
+  setTimeout(function(){
+    $.get(state.page.next, (data2) => {
+
+          if (!data2) { return alert('no hay data');}
+
+          state.pin2 = data2.data;
+          state.page2= data2.page;
+
+          console.log(state.pin2);
+          console.log(state.pin2.length);
+
+
+        });
+
+  },2000);
 
   return section;
 

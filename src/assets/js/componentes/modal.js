@@ -61,6 +61,9 @@ const Modal=(update)=>{
   const sites=$('<div class="proced--site"> '+site+'</div>');
   const favicon=$('<img src="'+faviconI+'" alt="favicon" width="15%">');
   const desc=$('<p class="item__info--descrip">'+describe+'</p>');
+  const comentP=$('<div class="comentarios"></div>');
+  const coment=$('<a href="#">Comentarios</a>');
+  const comentAdd=$('<div class="none"><input type="text" placeholder="Añadir un comentario..."/></div>');
   const publicado=$('<div class="item__info--publicar">Publicado</div>');
   const fecha=$('<div class="publicar--fecha">'+publico+'</div>');
   const user=$('<div class="item__info--user"></div>');
@@ -85,6 +88,9 @@ const Modal=(update)=>{
   proced.append(favicon);
   proced.append(sites);
   item__info.append(desc);
+  item__info.append(comentP);
+  comentP.append(coment);
+  comentP.append(comentAdd);
   item__info.append(publicado);
   publicado.append(fecha);
   item__info.append(user);
@@ -99,25 +105,27 @@ const Modal=(update)=>{
     update();
   });
 
+  coment.on('click',function(e){
+    console.log(e.target);
+    console.log(e.target.nextSibling);
+    if((e.target.nextSibling).style.display=="block"){
+      (e.target.nextSibling).style.display="none"
+    }else{
+      (e.target.nextSibling).style.display="block";
+    }
+
+  })
+
   return section;
 
 
 
 
-// $.get(state.page.next, (data2) => {
-//
-//       if (!data2) { return alert('no hay data');}
-//
-//       state.pin2 = data2.data;
-//       state.page2= data2.page;
-//
-//
-//     });
-//
-//     setTimeout(function(){
-//       console.log(state.pin2);
-//       console.log(state.page2);
-//     }, 1000);
+
+    setTimeout(function(){
+      console.log(state.pin2);
+      console.log(state.page2);
+    }, 1000);
 
 
 }
