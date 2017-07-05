@@ -17,4 +17,5 @@ const Header  = ()=> {
   navBar.append(images);
   headerLink.append(headerLinkName);
 
+  return header;
 }
