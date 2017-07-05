@@ -14,14 +14,7 @@ const Board=(update)=>{
   }
 
 
-  $.get('https://api.pinterest.com/v1/users/arabelyuska/?access_token=AS5yFQ7Fwzlb9cckakl1q9cybiC6FM5EIvFRH11EItsdIWA_dQAAAAA&fields=first_name%2Cid%2Clast_name%2Curl%2Cimage', (dataI) => {
 
-      if (!dataI) { return alert('no hay data');}
-
-      state.image = dataI.data;
-      console.log(state.image.image);
-
-    });
 
 const section= $('<section class="board"></section>');
 const item=$('<div class="item"></div>');
@@ -34,7 +27,7 @@ const titles=$('<div class="item_info--titles">'+titulo+'</div>');
 const h3=$('<h3 class="item-title"></h3>');
 const subt=$('<div class="item-subtl"></div>');
 const user=$('<div class="item_info--user"></div>');
-const avatar=$('<div class="item-avatar"></div>');
+const avatar=$('<img class="item-avatar" src="https://s-media-cache-ak0.pinimg.com/avatars/arabelyuska_1476548892_60.jpg"/>');
 const data=$('<div class="item-data"></div>');
 const name=$('<div class="item-data_dataname">'+state.pin[2].creator.first_name+'</div>');
 const tagline=$('<div class="item-data_tagline">'+state.pin[2].board.name+'</div>');

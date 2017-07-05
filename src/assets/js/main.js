@@ -20,7 +20,7 @@ const state = {
   page:null,
   pin2:null,
   page2:null,
-  image:null
+  
 
 }
 
