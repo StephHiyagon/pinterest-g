@@ -4,12 +4,16 @@ const render = (root) => {
   const update = function() {
     render(root);
   }
+  if(state.modal==null){
+    wrapper.append(Board(update));
+  }
 
-  wrapper.append(Board(update));
+  if(state.modal=="modal"){
+    wrapper.append(Modal(update));
+  }
 
+  // if(state.modal)
 ;
-
-
   root.append(wrapper);
 
 }
@@ -20,8 +24,13 @@ const state = {
   page:null,
   pin2:null,
   page2:null,
-  
-
+  modal:null,
+  id:null,
+  data:null,
+  image:null,
+  creator:null,
+  nameBoard:null,
+  titulo:null
 }
 
 

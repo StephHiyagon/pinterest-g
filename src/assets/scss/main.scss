@@ -2,3 +2,17 @@ body{
   background-color: white;
   color:brown;
 }
+
+.item{
+  display:inline-flex;
+  flex-wrap: wrap;
+  width:20%;
+  .item_stack{
+    display:inline-block;
+    img{
+      width:100%;
+      cursor:pointer;
+    }
+  }
+
+}
