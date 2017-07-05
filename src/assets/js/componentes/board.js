@@ -1,17 +1,21 @@
 const Board=(update)=>{
+
   console.log("portada board");
-  console.log(state.pin);
+  // console.log(state.pin);
   console.log(state.pin[2]);
-  console.log(state.page.next);
+  // console.log(state.page.next);
   var titulo;
   console.log(state.pin[2].metadata.article);
+  console.log(state.pin[2].note);
+
 
   if(state.pin[2].metadata.article=="undefined"){
     titulo=state.pin[2].note;
-    console.log(titulo);
-  }else{
-    titulo=state.pin[2].note;
   }
+  // }else if (state.pin[2].metadata.article.name!="undefined"){
+  //   titulo=state.pin[2].metadata.article.name;
+  //   console.log(titulo);
+  // }
 
 
 
@@ -55,7 +59,7 @@ $.get(state.page.next, (data2) => {
 
       state.pin2 = data2.data;
       state.page2= data2.page;
-      console.log("HolaSteph");
+
 
     });
 
