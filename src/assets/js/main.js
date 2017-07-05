@@ -20,6 +20,7 @@ const state = {
   page:null,
   pin2:null,
   page2:null,
+  image:null
 
 }
 
@@ -32,7 +33,7 @@ $(_=>{
 
       state.pin = data.data;
       state.page= data.page;
-      
+
       const root = $('#root');
       render(root);
     });
