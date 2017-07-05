@@ -11,9 +11,9 @@ const Header  = ()=> {
   const overlay = $('<div class="overlay"></div>');
   const container = $('<div class="header__links row"></div>');
   const headerDivLink = $('<div class="header__links__container col m8 offset-m2"></div>');
-  const share = $('<div class="header__links__container--share"><div class="img"></div></div>');
-  const name = $('<h5 class="header__links--title">Web UI</h5>');
-  const btnFollow = $('<div><button>Seguir tablero</button></div>');
+  const share = $('<div class="header__links__container--share"><img src="assets/img/upload.png" class="icon"></div>');
+  const name = $('<h5 class="header__links__container--title">Web UI</h5>');
+  const btnFollow = $('<div class = "header__links__container--btn"><button class="btn waves-effect waves-dark">Seguir tablero</button></div>');
   const divInfo = $('<div class="header__info"></div>')
   const divInfoTitle = $('<h1 class="header__info--title">Web UI</h1>');
   const divInfoNumber = $('<p class="header__info--pines"></p>');
@@ -51,10 +51,10 @@ const Header  = ()=> {
   $(window).scroll(function(e) {
     const cursorY = $(window).scrollTop();
     console.log(cursorY);
-    if (cursorY > 100) {
-      name.show();
+    if (cursorY > 200) {
+      name.slideDown("slow");
     } else {
-      name.hide();
+      name.slideUp("slow");
     }
   });
 
