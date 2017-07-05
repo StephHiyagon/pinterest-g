@@ -1,16 +1,20 @@
-const Board=(update)=>{
-  console.log("portada board");
-  console.log(state.pin);
-  console.log(state.pin[2]);
-  console.log(state.page.next);
+const Modal=(update)=>{
+  // console.log("portada board");
+  // console.log(state.pin);
+  console.log(state.pin[2].note);
+  // console.log(state.page.next);
   var titulo;
+  var tituloO;
   console.log(state.pin[2].metadata.article);
 
-  if(state.pin[2].metadata.article=="undefined"){
+  if(state.pin[2].metadata.article==undefined){
     titulo=state.pin[2].note;
-    console.log(titulo);
-  }else{
-    titulo=state.pin[2].note;
+    // console.log(titulo);
+  }
+
+  if(state.pin[2].metadata.article!=undefined){
+    tituloO=state.pin[2].metadata.article;
+    titulo=tituloO.name;
   }
 
 
@@ -61,7 +65,7 @@ $.get(state.page.next, (data2) => {
 
     setTimeout(function(){
       console.log(state.pin2);
-      console.log(state.page2);
+      // console.log(state.page2);
     }, 1000);
 
 

@@ -1,3 +1,13 @@
 body {
   background-color: white;
   color: brown; }
+
+.item {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 20%; }
+  .item .item_stack {
+    display: inline-block; }
+    .item .item_stack img {
+      width: 100%;
+      cursor: pointer; }

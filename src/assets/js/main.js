@@ -6,10 +6,8 @@ const render = (root) => {
   }
 
   wrapper.append(Board(update));
-
+  // if(state.modal)
 ;
-
-
   root.append(wrapper);
 
 }
@@ -20,7 +18,7 @@ const state = {
   page:null,
   pin2:null,
   page2:null,
-  
+
 
 }
 
