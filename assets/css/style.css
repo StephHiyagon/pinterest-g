@@ -20,6 +20,36 @@ body {
   padding: 2px 0; }
   .item:hover {
     background: #f3f3f3; }
+  .item__button {
+    position: relative; }
+    .item__button--upload {
+      position: absolute;
+      padding: 6.66667px;
+      width: 19.66667px;
+      height: 20px;
+      background: white;
+      border-radius: 4px;
+      top: 7.69231px;
+      left: 16.66667px; }
+      .item__button--upload img {
+        width: 100%;
+        height: 100%; }
+    .item__button--savepin {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 6.66667px;
+      width: 78.66667px;
+      height: 20px;
+      background: firebrick;
+      border-radius: 4px;
+      top: 7.69231px;
+      right: 16.66667px; }
+      .item__button--savepin a {
+        color: white;
+        font-size: 11px;
+        text-decoration: none; }
   .item__stack--image {
     display: block;
     width: 236px;

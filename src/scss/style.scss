@@ -28,6 +28,44 @@ body {
   &:hover {
     background: #f3f3f3;
   }
+  &__button{
+    position: relative;
+    &--upload{
+      position: absolute;
+      padding: $gutter/3;
+      width: $itemWidth/12;
+      height: $gutter;
+      background: $bg-white-color;
+      border-radius: $borderRadius - 2px;
+      top: $gutter/2.6;
+      left: $gutter/1.2;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &--savepin{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: $gutter/3;
+      width: $itemWidth/3;
+      height: $gutter;
+      background: $bg-red-color;
+      border-radius: $borderRadius - 2px;
+      top: $gutter/2.6;
+      right: $gutter/1.2;
+      a{
+        color: $bg-white-color;
+        font-size: $primary-font-size;
+        text-decoration: none;
+        span{
+
+        }
+      }
+    }
+  }
   &__stack{
     @extend .element-stack ;
     &--image{
