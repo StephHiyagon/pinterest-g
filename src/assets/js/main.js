@@ -30,7 +30,10 @@ const state = {
   image:null,
   creator:null,
   nameBoard:null,
-  titulo:null
+  titulo:null,
+  nota:null,
+  publicado:null,
+  site:null
 }
 
 

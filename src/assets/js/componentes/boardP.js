@@ -3,22 +3,22 @@ const Board = (update)=>{
   console.log(pins);
   const tam=state.pin.length;
   console.log(tam);
-  const section= $('<section class="js-board"></section>');
+  const section= $('<section class="board js-board"></section>');
 
   pins.forEach((p)=>{
     const item=$('<div class="item"></div>');
-    const item_stack=$('<div class="item_stack"></div>');
-    const image=$('<img src="'+ p.image.original.url+'" id="'+p.id+'" class="item_stack--image" alt="imagen"/>')
+    const item__stack=$('<div class="item__stack"></div>');
+    const image=$('<img src="'+ p.image.original.url+'" id="'+p.id+'" class="item__stack--image" alt="imagen"/>')
 
     section.append(item);
-    item.append(item_stack);
-    item_stack.append(image);
+    item.append(item__stack);
+    item__stack.append(image);
 
   });
 
   section.on('click', (event)=>{
     console.log(event.target);
-    if(event.target.className == "item_stack--image"){
+    if(event.target.className == "item__stack--image"){
       console.log(event.target);
       console.log('entraste al modal');
     }
@@ -38,6 +38,11 @@ const Board = (update)=>{
     state.creator=state.data.creator.first_name;
     state.nameBoard=state.data.board.name;
     state.titulo=state.data.metadata.article;
+    state.nota=state.data.note;
+    state.site=state.data.metadata.link;
+    // state.favicon=state.data.metadata.link.favicon;
+    console.log(state.site);
+    // state.publicado=state.data.metadata.article.published_at;
 
     update();
     });
