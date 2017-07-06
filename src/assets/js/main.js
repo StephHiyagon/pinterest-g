@@ -4,8 +4,19 @@ const render = (root) => {
   const update = function() {
     render(root);
   }
-  wrapper.append(Header(update));
 
+
+  if(state.modal==null){
+    wrapper.append(Header(update));
+    wrapper.append(Board(update));
+  }
+
+  if(state.modal=="modal"){
+    wrapper.append(Modal(update));
+  }
+
+  // if(state.modal)
+;
   root.append(wrapper);
 
 }
@@ -15,7 +26,18 @@ const state = {
   pin:null,
   page:null,
   pin2:null,
-  page2:null
+  page2:null,
+  pines:null,
+  modal:null,
+  id:null,
+  data:null,
+  image:null,
+  creator:null,
+  nameBoard:null,
+  titulo:null,
+  nota:null,
+  publicado:null,
+  site:null
 }
 
 
@@ -27,9 +49,13 @@ $(_=>{
 
       state.pin = data.data;
       state.page= data.page;
+
       const root = $('#root');
       render(root);
-      console.log("hola");
+
     });
+
+
+
 
 });

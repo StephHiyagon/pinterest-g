@@ -30,12 +30,15 @@ var sources = {
   rootJS: config.source + paths.assets + paths.mainJS,
   img: config.source + paths.assets + paths.img
 };
+
 gulp.task('html', ()=> {
   gulp.src(sources.html).pipe(gulp.dest(config.dist));
 });
+
 gulp.task('img', ()=> {
   gulp.src(sources.img).pipe(gulp.dest(config.dist+ paths.assets + "img"));
 });
+
 gulp.task('sass', ()=> {
   gulp.src(sources.rootSass)
     .pipe(sass({
@@ -55,6 +58,9 @@ gulp.task('js', ()=> {
       .pipe(gulp.dest(config.dist + paths.assets + "js"))
       .pipe(browserSync.stream());
 });
+
+
+
 // gulp.task('js', ()=> {
 //    gulp.src(sources.rootJS)
 //       .pipe(browserify())
