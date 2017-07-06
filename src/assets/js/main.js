@@ -5,8 +5,9 @@ const render = (root) => {
     render(root);
   }
 
-  wrapper.append(Header(update));
+
   if(state.modal==null){
+    wrapper.append(Header(update));
     wrapper.append(Board(update));
   }
 

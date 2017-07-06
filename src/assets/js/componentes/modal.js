@@ -45,7 +45,7 @@ const Modal=(update)=>{
   console.log(faviconI);
   console.log(principal);
   console.log(describe);
-  const section= $('<section class="modal"></section>');
+  const section= $('<section class="modalModal"></section>');
   const item=$('<div class="item"></div>');
   const close=$('<span id="close">X</span>');
   const item__stack=$('<div class="item__stack"></div>');
