@@ -136,7 +136,8 @@ body {
     .header__info--photo {
       position: absolute;
       bottom: -30px;
-      right: 100px; }
+      right: 100px;
+      z-index: 0; }
       .header__info--photo img {
         border-radius: 50px; }
     .header__info span {
