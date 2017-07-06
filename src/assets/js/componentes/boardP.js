@@ -42,8 +42,8 @@ const Board = (update)=>{
     state.site=state.data.metadata.link;
 
     console.log(state.site);
-    
 
+    document.getElementsByTagName('body')[0].style.overflow="hidden";
     update();
     });
 
@@ -65,6 +65,45 @@ const Board = (update)=>{
         });
 
   },2000);
+
+  $(document).scroll(function(){
+    var browser=$(window).height();
+    var altoVentana= $(document).height();
+    var scroll= $(document).scrollTop();
+
+    console.log('Este es el scroll'+ scroll);
+    console.log('Este es el tamaño del browser'+ browser);
+    console.log('tamaño del ventana '+ altoVentana);
+    console.log('suma '+ (scroll+altoVentana));
+    var i=0;
+        if((scroll+browser)>=altoVentana)
+          // if(scroll>7550 && scroll<75)
+            {
+                // var i=0;
+                console.log("cargar más contenido");
+                console.log(state.pin2);
+                const pins2=state.pin2;
+                // for(var i=0;i<pins2.length;i++){
+                // if(i<pins2.length){
+                // setTimeout(function(){
+                  pins2.forEach(function(p2){
+                    $(".item__stack").append('<img src="'+ p2.image.original.url+'" id="'+p2.id+'" class="item__stack--image" alt="imagen"></img>');
+                  });
+                // },1000);
+
+
+
+                // }
+                // i+=1;
+
+                // }
+
+                // }
+
+
+            }
+        });
+
 
   return section;
 

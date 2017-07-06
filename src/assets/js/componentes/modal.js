@@ -102,6 +102,7 @@ const Modal=(update)=>{
   close.on('click',function(e){
     console.log(e.target);
     state.modal=null;
+    document.getElementsByTagName('body')[0].style.overflow="auto";
     update();
   });
 
