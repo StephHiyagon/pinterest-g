@@ -8,13 +8,13 @@
   <title>Pinterest</title>
 </head>
 <body>
-  <h1>Pinterest</h1>
+  <!-- <h1>Pinterest</h1> -->
   <div class="container" id="root">
 
     <!-- Bloque header -->
-    <header class="header">
+    <!-- <header class="header"> -->
       <!-- Elemento Navegador -->
-      <nav class="header__nav">
+      <!-- <nav class="header__nav">
         <img src="assets/img/pinterest-logo.png" class="header__nav--logo" alt="Logo de Pinterest">
         <div class="header__nav--search">
           <i class="fa fa-search" aria-hidden="true"></i>
@@ -23,39 +23,37 @@
         <img src="assets/img/icon-profile.png" class="header__nav--profile" alt="Icono de persona">
         <img src="assets/img/menu-hamburguer.png" class="header__nav--menu" alt="Icono de menu">
         <img src="assets/img/message.png" class="header__nav--message" alt="Icono de mensaje">
-      </nav>
+      </nav> -->
       <!-- Elemento links scroll -->
-      <div class="header__links">
+      <!-- <div class="header__links">
         <img src="assets/img/upload-arrow.png" class="header__links--share" alt="">
         <button type="button" class="header__links--follow" name="button">Seguir tablero</button>
-      </div>
+      </div> -->
       <!-- Elemento info -->
-      <div class="header__info">
+      <!-- <div class="header__info">
         <h1 class="header__info--title">Web UI</h1>
         <label for=""><span class="header__info--pines"></span>Pines</label>
         <label for=""><span class="header__info--followers"></span>Seguidores</label>
         <div class="header__info--photo"></div>
       </div>
-    </header>
+    </header> -->
 
     <!-- Bloque board -->
     <section class="board">
-
       <!-- Bloque item -->
       <div class="item">
-        <!-- Elemento que contiene botones -->
-        <div class="item__button">
-          <div class="item__button--upload">
-            <img src="assets/img/upload.png" alt="Icono de descarga">
-          </div>
-          <div class="item__button--savepin">
-            <a data-pin-do="buttonBookmark" data-pin-save="true" data-pin-hover="true" data-pin-tall="true" href="https://es.pinterest.com/pin/create/button/">
-              <i class="fa fa-thumb-tack" aria-hidden="true"></i>
-              <span>Guardar</span>
-            </a>
-          </div>
+        <!-- Elemento botón de carga -->
+        <div class="item__button--upload">
+          <img src="assets/img/upload.png" alt="Icono de descarga">
         </div>
-        <!-- Elemento que contiene la imagen  -->
+        <!-- Elemento botón de guardar imagen -->
+        <div class="item__button--savepin">
+          <a data-pin-do="buttonBookmark" data-pin-save="true" data-pin-hover="true" data-pin-tall="true" href="https://es.pinterest.com/pin/create/button/">
+            <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+            <span>Guardar</span>
+          </a>
+        </div>
+        <!-- Elemento que contiene la imagen -->
         <div class="item__stack">
           <img class="item__stack--image" src="assets/img/common-maple.jpg" alt="" />
         </div>
@@ -72,9 +70,7 @@
           </div>
           <!-- Modificador que contiene datos de la persona  -->
           <div class="item__info--user">
-            <!-- Avatar -->
             <div class="item-avatar"></div>
-            <!-- Info -->
             <div class="item-data">
               <!-- Nombre -->
               <div class="item-data__dataname">Arabela</div>
@@ -84,17 +80,54 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Bloque Modal -->
-      <div class="content-modal">
-        <div class="open-close"></div>
-        <!-- Elemento que contiene iconos -->
-        <div></div>
-        <!-- Elemento que contiene zoom -->
-        <div></div>
-        <!-- Elemento que contiene  -->
+    <!-- Bloque modal -->
+    <section class="modal">
+      <span class="modal__close">x</span>
+      <div class="item">
+        <div class="item__icons">
+          <div class="item__icons--group">
+            <div class="item__icons--group-upload"></div>
+            <div class="item__icons--group-check"></div>
+            <div class="item__icons--group-dots"></div>
+          </div>
+          <div class="item__icons--savepin">
+            <a data-pin-do="buttonBookmark" data-pin-save="true" data-pin-hover="true" data-pin-tall="true" href="https://es.pinterest.com/pin/create/button/">
+              <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+              <span>Guardar</span>
+            </a>
+          </div>
+        </div>
+        <div class="item__title">
+          <h1>Plantaciones de verano</h1>
+        </div>
+        <div class="item__stack">
+          <img class="item__stack--image" src="assets/img/common-maple.jpg" alt="">
+          <div class="item__stack--expand">
+            <img src="assets/img/expand.png" alt="">
+          </div>
+        </div>
+        <div class="item__info">
+          <div class="item__info--titles">
+            <h3 class="item-title"></h3>
+            <div class="item-subtl"></div>
+          </div>
+          <div class="item__info--proced">
+            <div class="proced--site"></div>
+          </div>
+          <div class="item__info--publicar">
+            <div class="publicar--fecha"></div>
+          </div>
+          <div class="item__info--user">
+            <div class="item-avatar"></div>
+            <div class="item-data">
+              <div class="item-data__dataname"></div>
+              <div class="item-data__tagline"></div>
+            </div>
+          </div>
+        </div>
       </div>
-
     </section>
 
   </div>
