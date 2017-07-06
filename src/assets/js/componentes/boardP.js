@@ -69,14 +69,14 @@ const Board = (update)=>{
   $(document).scroll(function(){
     var browser=$(window).height();
     var altoVentana= $(document).height();
-    var scroll= $(document).scrollTop();
+    var scroll= $(window).scrollTop();
 
-    console.log('Este es el scroll'+ scroll);
+    console.log('Este es el scroll'+ parseInt(scroll));
     console.log('Este es el tamaño del browser'+ browser);
     console.log('tamaño del ventana '+ altoVentana);
-    console.log('suma '+ (scroll+altoVentana));
+    console.log('resta '+ (altoVentana-browser));
     var i=0;
-        if((scroll+browser)>=altoVentana)
+        if(parseInt(scroll)==(altoVentana-browser))
           // if(scroll>7550 && scroll<75)
             {
                 // var i=0;
