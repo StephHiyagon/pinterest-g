@@ -1,4 +1,223 @@
-body{
-  background-color: pink;
-  color:brown;
+@import "colors";
+@import "fonts";
+@import "sizes";
+@import "header";
+@import "botones";
+@import "elementos";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primary-font-stack;
+  font-size: $primary-font-size;
+  line-height: $primary-line-height;
+  margin:0;
+  padding:0;
+}
+
+.element-stack{
+  padding: 0 ($gutter / 2);
+  margin: ($gutter / 2) 0;
+}
+
+.element-user{
+  display: inline-block;
+  vertical-align: middle;
+  color: #555;
+  cursor: pointer;
+}
+
+.board{
+  column-width: 230px;
+  column-gap: 15px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 60px auto;
+  }
+
+
+.item{
+  width: $itemWidth + $gutter;
+  border-radius: $borderRadius;
+  cursor: zoom-in;
+  display:inline-block;
+  padding: ($gutter / 10) 0;
+  &:hover {
+    background: #f3f3f3;
+  }
+  &__stack{
+    @extend .element-stack ;
+    column-break-inside: avoid;
+    &--image{
+      display: inline-block;
+      width: $itemWidth;
+      border-radius: $borderRadius;
+      // height: random(300)+px;
+    }
+  }
+  &__info{
+    position: relative;
+    &--pin-count{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-top: 0;
+      color: #a7a7a7;
+      font-weight: bold;
+      padding: $gutter / 2;
+    }
+    &--titles{
+      @extend .element-stack ;
+      .item-title{
+        max-width: $titleWidth;
+        color: #444;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: bold;
+      }
+      .item-subtl{
+        max-width: $titleWidth;
+        color: #b5b5b5;
+        font-size: 11px;
+        line-height: 12px;
+        font-weight: bold;
+      }
+    }
+    &--user{
+      @extend .element-stack ;
+      .item-avatar{
+        @extend .element-user ;
+        background-image: url('https://s-media-cache-ak0.pinimg.com/avatars/arabelyuska_1476548892_60.jpg');
+        background-size: cover;
+        width: $avatarSize;
+        height: $avatarSize;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+      .item-data{
+        @extend .element-user ;
+        &__dataname{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.none{
+  display:none;
+}
+
+.block{
+  display:block;
+}
+
+.modalModal{
+  position: relative;
+  background-color: $color-gris-soft;
+  min-height: 600px;
+  padding: $gutter*2 0;
+  cursor: zoom-out;
+  &__close{
+    font-size: $primary-font-size*2;
+    color: $color-gris-hard;
+    font-weight: bold;
+    position: absolute;
+    top: $gutter*3;
+    right: $gutter*2.2;
+  }
+  .item{
+    @extend .element-stack ;
+    width: $itemWidth*2.5 + $gutter;
+    padding-bottom: $gutter/2;
+    background-color: $color-white;
+    border-radius: $borderRadius;
+    margin: 0 auto;
+    cursor: pointer;
+    &__icons{
+      width: $itemWidth*2.5 - $gutter*2;
+      background-color: $color-white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $gutter/2 $gutter*1.5;
+      &--group{
+        &-upload{
+          display: inline-flex;
+          padding: 10px;
+          width: 25px;
+          height: 25px;
+          background-image: url("../img/upload.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          &:hover {
+            background-color: $color-gris-soft;
+            border-radius: 50%;
+          }
+        }
+        &-check{
+          display: inline-flex;
+          padding: 10px;
+          width: 25px;
+          height: 25px;
+          background-image: url("../img/check-mark.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          &:hover {
+            background-color: $color-gris-soft;
+            border-radius: 50%;
+          }
+        }
+        &-dots{
+          display: inline-flex;
+          padding: 10px;
+          width: 25px;
+          height: 25px;
+          background-image: url("../img/three-dots.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          &:hover {
+            background-color: $color-gris-soft;
+            border-radius: 50%;
+          }
+        }
+      }
+      &--savepin{
+        @extend .pin-it ;
+      }
+    }
+    &__title{
+      @extend .element-stack ;
+      padding: 0 $gutter*1.5;
+    }
+    &__stack{
+      width: $itemWidth*2.5 - $gutter*2;
+      padding: 0 $gutter*1.5;
+      margin: 0 auto;
+      position: relative;
+      &--image{
+        width: 100%;
+        height: 100%;
+        border-radius: $borderRadius;
+      }
+      &--expand{
+        width: 25px;
+        height: 25px;
+        padding: $gutter/5;
+        position: absolute;
+        top: $gutter/2;
+        right: $gutter*2;
+        background: transparentize($color-gris-hard, 0.6);
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &__info{
+
+    }
+  }
 }

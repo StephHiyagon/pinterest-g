@@ -1,0 +1,18 @@
+.pin-it{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: $gutter/3;
+  width: $itemWidth/3;
+  height: $gutter;
+  background: $color-red;
+  border-radius: $borderRadius - 2px;
+  a{
+    color: $color-white;
+    font-size: $primary-font-size;
+    text-decoration: none;
+  }
+  &:hover{
+    background-color: darken($color-red, 3%);
+  }
+}

@@ -1,0 +1,11 @@
+.element-stack{
+  padding: 0 ($gutter / 2);
+  margin: ($gutter / 2) 0;
+}
+
+.element-user{
+  display: inline-block;
+  vertical-align: middle;
+  color: $color-gris-hard;
+  cursor: pointer;
+}
