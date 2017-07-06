@@ -50,6 +50,8 @@ $(_=>{
       state.pin = data.data;
       state.page= data.page;
 
+      console.log(data.data);
+
       const root = $('#root');
       render(root);
 

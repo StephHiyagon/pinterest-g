@@ -2,6 +2,8 @@
 @import "fonts";
 @import "sizes";
 @import "header";
+@import "botones";
+@import "elementos";
 
 * {
   box-sizing: border-box;
@@ -110,4 +112,112 @@ body {
 
 .block{
   display:block;
+}
+
+.modalModal{
+  position: relative;
+  background-color: $color-gris-soft;
+  min-height: 600px;
+  padding: $gutter*2 0;
+  cursor: zoom-out;
+  &__close{
+    font-size: $primary-font-size*2;
+    color: $color-gris-hard;
+    font-weight: bold;
+    position: absolute;
+    top: $gutter*3;
+    right: $gutter*2.2;
+  }
+  .item{
+    @extend .element-stack ;
+    width: $itemWidth*2.5 + $gutter;
+    padding-bottom: $gutter/2;
+    background-color: $color-white;
+    border-radius: $borderRadius;
+    margin: 0 auto;
+    cursor: pointer;
+    &__icons{
+      width: $itemWidth*2.5 - $gutter*2;
+      background-color: $color-white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $gutter/2 $gutter*1.5;
+      &--group{
+        &-upload{
+          display: inline-flex;
+          padding: 10px;
+          width: 25px;
+          height: 25px;
+          background-image: url("../img/upload.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          &:hover {
+            background-color: $color-gris-soft;
+            border-radius: 50%;
+          }
+        }
+        &-check{
+          display: inline-flex;
+          padding: 10px;
+          width: 25px;
+          height: 25px;
+          background-image: url("../img/check-mark.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          &:hover {
+            background-color: $color-gris-soft;
+            border-radius: 50%;
+          }
+        }
+        &-dots{
+          display: inline-flex;
+          padding: 10px;
+          width: 25px;
+          height: 25px;
+          background-image: url("../img/three-dots.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          &:hover {
+            background-color: $color-gris-soft;
+            border-radius: 50%;
+          }
+        }
+      }
+      &--savepin{
+        @extend .pin-it ;
+      }
+    }
+    &__title{
+      @extend .element-stack ;
+      padding: 0 $gutter*1.5;
+    }
+    &__stack{
+      width: $itemWidth*2.5 - $gutter*2;
+      padding: 0 $gutter*1.5;
+      margin: 0 auto;
+      position: relative;
+      &--image{
+        width: 100%;
+        height: 100%;
+        border-radius: $borderRadius;
+      }
+      &--expand{
+        width: 25px;
+        height: 25px;
+        padding: $gutter/5;
+        position: absolute;
+        top: $gutter/2;
+        right: $gutter*2;
+        background: transparentize($color-gris-hard, 0.6);
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &__info{
+
+    }
+  }
 }
