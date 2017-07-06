@@ -65,14 +65,14 @@ const Modal=(update)=>{
   // const pin__count=$('<div class="item__info--pin-count"></div>');
 
   const titles=$('<div class="item__info--titles">'+titulo+'</div>');
-  const h3=$('<h3 class="item-title"></h3>');
-  const subt=$('<div class="item-subtl"></div>');
   const proced=$('<div class="item__info--proced"></div>');
-  const sites=$('<div class="proced--site"> '+site+'</div>');
   const favicon=$('<img src="'+faviconI+'" alt="favicon" width="15%">');
-  const desc=$('<p class="item__info--descrip">'+describe+'</p>');
-  const comentP=$('<div class="comentarios"></div>');
-  const coment=$('<a href="#">Comentarios</a>');
+  const divSite=$('<div class="proced-site"></div>');
+  const sites=$('<div class="proced-site__dataname"> '+site+'</div>');
+  const desc=$('<p class="proced-site__tagline">'+describe+'</p>');
+  const visitar=$('<div class="proced-visit">visitar</div>');
+  const comentP=$('<div class="item__info--coment"></div>');
+  const coment=$('<p for="">Comentarios</p>');
   const comentAdd=$('<div class="none"><input type="text" placeholder="Añadir un comentario..."/></div>');
   const publicado=$('<div class="item__info--publicar">Publicado</div>');
   const fecha=$('<div class="publicar--fecha">'+publico+'</div>');
@@ -101,12 +101,11 @@ const Modal=(update)=>{
   // item__info.append(pin__count);
   // pin__count.append(i);
   item__info.append(titles);
-  titles.append(h3);
-  titles.append(subt);
   item__info.append(proced);
   proced.append(favicon);
-  proced.append(sites);
-  item__info.append(desc);
+  proced.append(divSite);  
+  divSite.append(sites);
+  divSite.append(desc);
   item__info.append(comentP);
   comentP.append(coment);
   comentP.append(comentAdd);

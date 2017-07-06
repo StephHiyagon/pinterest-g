@@ -43,7 +43,7 @@ const Board = (update)=>{
 
     console.log(state.site);
 
-    document.getElementsByTagName('body')[0].style.overflow="hidden";
+    // document.getElementsByTagName('body')[0].style.overflow="hidden";
     update();
     });
 
